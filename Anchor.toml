@@ -1,0 +1,16 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.localnet]
+large_stack_app = "HHTUQDcC2Ht1CPhRJzkRLhr1qZhbkQ9TFgMZ4hg9gbT7"
+stack_test = "G94eEM6q11o6XKuRV83aTbzmr8B56W5RRiC3vgVciwJB"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "/root/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
