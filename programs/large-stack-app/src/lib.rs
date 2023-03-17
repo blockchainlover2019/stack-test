@@ -1,12 +1,12 @@
 use anchor_lang::prelude::*;
-use anchor_spl::token::{self, Mint, Token, TokenAccount, Transfer};
+use anchor_spl::token::{Token, TokenAccount};
 
 declare_id!("HHTUQDcC2Ht1CPhRJzkRLhr1qZhbkQ9TFgMZ4hg9gbT7");
 
 #[program]
 pub mod large_stack_app {
     use super::*;
-    pub fn use_large_stack(context: Context<UseLargeStack>) -> Result<()> {
+    pub fn use_large_stack(_context: Context<UseLargeStack>) -> Result<()> {
         Ok(())
     }
 }

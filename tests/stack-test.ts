@@ -21,7 +21,6 @@ describe("stack-test", () => {
     await airdropSol(provider, testKey.publicKey, 10 * LAMPORTS_PER_SOL);
     const tokenMint = await createMint(provider.connection, testKey, testKey.publicKey, null, 6);
     for (let i = 0; i < 11; i ++) {
-      console.log('i =', i);
       let accKey = await createAccount(provider.connection, testKey, tokenMint, testKey.publicKey, Keypair.generate())
       tokenAccounts.push(accKey);
     }
